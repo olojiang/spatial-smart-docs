@@ -2,7 +2,7 @@
 
 Spatial Smart uses **Pinefield Single Sign-On (SSO)**. If you aren't signed in when you open the platform, you're redirected to the sign-in page at `alpha.pinefield.cn/pinefield.sso`.
 
-<Shot src="/media/zh/login-sso.png" url="alpha.pinefield.cn/pinefield.sso" caption="Pinefield SSO page: account, password, and a 6-digit captcha" />
+<Shot src="/media/zh/login-sso.png" url="alpha.pinefield.cn/pinefield.sso" caption="Single sign-on (SSO) page: account, password, and a 6-digit captcha" />
 
 ## Sign in
 

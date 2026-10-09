@@ -1,8 +1,8 @@
 # 登录与退出
 
-Spatial Smart 使用**松田统一登录（SSO）**。打开平台地址时，如果尚未登录，会自动跳转到登录页 `alpha.pinefield.cn/pinefield.sso`。
+Spatial Smart 使用**统一登录（SSO）**。打开平台地址时，如果尚未登录，会自动跳转到登录页 `alpha.pinefield.cn/pinefield.sso`。
 
-<Shot src="/media/zh/login-sso.png" url="alpha.pinefield.cn/pinefield.sso" caption="松田统一登录页：账号、密码、6 位数字验证码" />
+<Shot src="/media/zh/login-sso.png" url="alpha.pinefield.cn/pinefield.sso" caption="统一登录页：账号、密码、6 位数字验证码" />
 
 ## 登录步骤
 

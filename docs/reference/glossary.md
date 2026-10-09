@@ -24,4 +24,4 @@
 | 下线 | Take offline | 停止对外提供当前版本 |
 | 运行日志 | Run logs | 每次接口调用的记录 |
 | 联网 | Web search | 允许 AI 在回答时搜索互联网 |
-| SSO | Single Sign-On | 松田统一登录 |
+| SSO | Single Sign-On | 统一登录 |

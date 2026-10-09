@@ -4,7 +4,7 @@
 
 <Kv :rows="[
   ['URL', '<a href=&quot;https://alpha.pinefield.cn/pinefield.spatial-smart/&quot; target=&quot;_blank&quot;>alpha.pinefield.cn/pinefield.spatial-smart</a>'],
-  ['Sign-in', 'Pinefield SSO: account + password + 6-digit image captcha'],
+  ['Sign-in', 'Single sign-on (SSO): account + password + 6-digit image captcha'],
   ['Interface language', 'Chinese / English, one click in the bottom-left corner'],
   ['Who it is for', 'Business and engineering teams who want to use AI to quickly build spatial apps, automations, or data APIs'],
 ]" />
