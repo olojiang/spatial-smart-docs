@@ -7,7 +7,7 @@ A **service** is an **API endpoint** generated from a conversation. Describe the
 ## The full lifecycle of a service
 
 ```mermaid
-flowchart LR
+flowchart TB
   N[New service<br/>Describe the endpoint] --> R[Route registered<br/>v1.0 goes live]
   R --> C[Request changes in conversation<br/>e.g. add a boothIds parameter]
   C --> D[Draft created]

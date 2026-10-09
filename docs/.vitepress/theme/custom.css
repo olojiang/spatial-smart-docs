@@ -47,3 +47,71 @@
 @keyframes ssd-float { 50% { transform: translate(-50%, -52%) perspective(1400px) rotateY(-12deg) rotateX(4deg); } }
 .VPHero .name { letter-spacing: -0.02em; }
 .VPHomeFeatures .VPFeature .icon { background: var(--vp-c-brand-soft); }
+
+/* ==========================================================================
+   Mermaid diagrams — themed card look. Every color is a site-theme variable,
+   so diagrams adapt to all 7 themes (light and dark).
+   ========================================================================== */
+.vp-doc .mermaid {
+  display: flex; justify-content: center; margin: 28px 0; padding: 28px 20px;
+  border: 1px solid var(--vp-c-divider); border-radius: 16px;
+  background:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--vp-c-text-3) 22%, transparent) 1px, transparent 0) 0 0 / 18px 18px,
+    var(--vp-c-bg-soft);
+}
+.vp-doc .mermaid svg { max-width: 100%; height: auto; overflow: visible; }
+/* nodes */
+.vp-doc .mermaid .node rect, .vp-doc .mermaid .node polygon, .vp-doc .mermaid .node circle,
+.vp-doc .mermaid .node ellipse, .vp-doc .mermaid .node path {
+  fill: var(--vp-c-bg) !important; stroke: var(--vp-c-brand-1) !important; stroke-width: 1.6px !important;
+  filter: drop-shadow(0 4px 10px color-mix(in srgb, var(--vp-c-brand-1) 18%, transparent));
+}
+.vp-doc .mermaid .node rect { rx: 12px; ry: 12px; }
+.vp-doc .mermaid .node text, .vp-doc .mermaid .node tspan, .vp-doc .mermaid .nodeLabel, .vp-doc .mermaid .nodeLabel p {
+  fill: var(--vp-c-text-1) !important; color: var(--vp-c-text-1) !important; font-weight: 500;
+}
+/* Labels are HTML inside <foreignObject>: neutralise VitePress paragraph styles
+   (margin / 28px line-height) that otherwise overflow the measured box and clip text. */
+.vp-doc .mermaid foreignObject { overflow: visible; }
+.vp-doc .mermaid foreignObject p, .vp-doc .mermaid foreignObject span, .vp-doc .mermaid foreignObject div {
+  margin: 0 !important; line-height: 1.5 !important; font-size: 15px !important;
+}
+.vp-doc .mermaid .edgeLabel foreignObject p, .vp-doc .mermaid .edgeLabel foreignObject span { font-size: 13px !important; padding: 0 4px; }
+/* edges and arrowheads */
+.vp-doc .mermaid .flowchart-link, .vp-doc .mermaid .edgePath path, .vp-doc .mermaid .transition {
+  stroke: color-mix(in srgb, var(--vp-c-brand-1) 70%, var(--vp-c-text-3)) !important; stroke-width: 1.8px !important;
+}
+.vp-doc .mermaid marker path, .vp-doc .mermaid .arrowheadPath, .vp-doc .mermaid marker circle {
+  fill: color-mix(in srgb, var(--vp-c-brand-1) 70%, var(--vp-c-text-3)) !important;
+  stroke: none !important;
+}
+/* edge labels: pill with page background so they never sit on top of lines/boxes */
+.vp-doc .mermaid .edgeLabel rect, .vp-doc .mermaid .labelBkg, .vp-doc .mermaid .edgeLabel .label rect {
+  fill: var(--vp-c-bg) !important; opacity: 1 !important; rx: 8px; ry: 8px;
+}
+.vp-doc .mermaid .edgeLabel, .vp-doc .mermaid .edgeLabel text, .vp-doc .mermaid .edgeLabel tspan {
+  fill: var(--vp-c-brand-1) !important; color: var(--vp-c-brand-1) !important; background: var(--vp-c-bg) !important;
+  font-size: 13px; font-weight: 600;
+}
+/* clusters (subgraphs) */
+.vp-doc .mermaid .cluster rect {
+  fill: color-mix(in srgb, var(--vp-c-brand-1) 5%, var(--vp-c-bg-soft)) !important;
+  stroke: var(--vp-c-divider) !important; stroke-dasharray: 5 4; rx: 14px; ry: 14px;
+}
+.vp-doc .mermaid .cluster-label text, .vp-doc .mermaid .cluster-label tspan { fill: var(--vp-c-text-2) !important; font-weight: 600; }
+/* state diagrams */
+.vp-doc .mermaid .stateGroup rect, .vp-doc .mermaid g.stateGroup rect { fill: var(--vp-c-bg) !important; stroke: var(--vp-c-brand-1) !important; }
+.vp-doc .mermaid .state-start, .vp-doc .mermaid .state-end, .vp-doc .mermaid circle.state-start { fill: var(--vp-c-brand-1) !important; stroke: var(--vp-c-brand-1) !important; }
+.vp-doc .mermaid .stateLabel text, .vp-doc .mermaid .state-title, .vp-doc .mermaid g.stateGroup text { fill: var(--vp-c-text-1) !important; }
+/* decision diamonds get a soft brand tint */
+.vp-doc .mermaid .node polygon { fill: var(--vp-c-brand-soft) !important; }
+/* edge-label chip: one clean pill, no default grey background boxes */
+.vp-doc .mermaid .edgeLabel .labelBkg, .vp-doc .mermaid .edgeLabel > rect, .vp-doc .mermaid .edgeLabel .label > rect { background: transparent !important; fill: transparent !important; }
+.vp-doc .mermaid .edgeLabel p {
+  background: var(--vp-c-bg-soft) !important; border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  border-radius: 999px; padding: 1px 8px !important; color: var(--vp-c-brand-1) !important;
+}
+.vp-doc .mermaid .edgeLabel p:empty { display: none; }
+.vp-doc .mermaid .edgeLabel span.edgeLabel { background: transparent !important; border: 0 !important; padding: 0 !important; }
+/* larger, crisper arrowheads */
+.vp-doc .mermaid marker path { transform: scale(1.6); transform-box: fill-box; transform-origin: center; }

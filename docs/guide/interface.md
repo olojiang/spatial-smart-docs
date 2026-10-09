@@ -4,24 +4,6 @@ Spatial Smart 是一个**三栏式工作台**：左边是导航，中间是对�
 
 <Shot src="/media/zh/service-overview.png" caption="三栏布局：① 导航栏 ② 对话区 ③ 工作台" marks="10,40,1|38,40,2|80,40,3" />
 
-```mermaid
-flowchart LR
-  subgraph L[① 左侧导航栏]
-    direction TB
-    l1[折叠按钮 · Logo] --> l2[空间选择器 · 搜索]
-    l2 --> l3[应用 / 智能体 / 服务]
-    l3 --> l4[当前模块的列表]
-    l4 --> l5[头像菜单 · 中/EN · 主题]
-  end
-  subgraph C[② 中间区域]
-    c1[对话 / 配置 / 空状态]
-  end
-  subgraph R[③ 右侧工作台]
-    r1[标签页 + 固定标签页 + 折叠]
-  end
-  L --- C --- R
-```
-
 ## ① 左侧导航栏
 
 | 位置 | 控件 | 作用 |

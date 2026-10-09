@@ -7,7 +7,7 @@
 ## 一个服务的完整生命周期
 
 ```mermaid
-flowchart LR
+flowchart TB
   N[新建服务<br/>描述接口功能] --> R[自动注册路由<br/>v1.0 上线]
   R --> C[在对话中提出调整<br/>如：增加 boothIds 参数]
   C --> D[生成待发布草稿]

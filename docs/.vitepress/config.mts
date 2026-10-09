@@ -86,14 +86,14 @@ export default withMermaid(
       // `::: steps` wraps an ordered list into a numbered timeline (see custom.css)
       config: (md) => { md.use(container, 'steps') },
     },
-    // Neutral teal palette for diagrams (no purple); dark themes use mermaid's dark base.
+    // Diagram layout: generous padding/spacing; label text styles are reset in
+    // custom.css so measured boxes always fit (no clipped text). Colors come from the active site theme via
+    // CSS variables in custom.css, so diagrams follow all 7 themes.
     mermaid: {
       theme: 'base',
-      themeVariables: {
-        primaryColor: '#e8f4f7', primaryBorderColor: '#1a7f9c', primaryTextColor: '#0f2a33',
-        secondaryColor: '#f1f5f4', tertiaryColor: '#fff7ed', lineColor: '#7c8b90',
-        fontFamily: 'Inter, "PingFang SC", "Microsoft YaHei", sans-serif', fontSize: '14px',
-      },
+      themeVariables: { edgeLabelBackground: 'transparent', fontFamily: 'Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif', fontSize: '15px' },
+      flowchart: { padding: 22, nodeSpacing: 56, rankSpacing: 64, diagramPadding: 20, curve: 'basis', useMaxWidth: true },
+      state: { padding: 16 },
     },
   }),
 )

@@ -33,7 +33,7 @@ Click **＋** (**Pin tab** (固定标签页)) at the right of the tab bar to pin
 Click **Collapse Code and preview** (折叠代码与预览) on the far right to hide the workbench and widen the conversation area; click it again (**Expand Code and preview** (展开代码与预览)) to restore it. You can also drag the divider between the conversation and the workbench to adjust the ratio.
 
 ```mermaid
-flowchart LR
+flowchart TB
   A[Send a request] --> B[AI generates / edits code]
   B --> C{Happy with it?}
   C -- Check the code --> D[Code tab]

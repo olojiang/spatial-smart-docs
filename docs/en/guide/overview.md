@@ -14,14 +14,12 @@
 The top-left corner has three module tabs: **Apps** (应用), **Agents** (智能体), and **Services** (服务). All of them work inside the **space** you select.
 
 ```mermaid
-flowchart LR
+flowchart TB
   U((You)) -->|Select| S[🗂️ Space]
-  S --> A[💬 Apps<br/>Conversation + code workbench]
-  S --> G[🤖 Agents<br/>General / Scheduled / Event-triggered]
-  S --> V[🔌 Services<br/>API endpoints + versions + logs]
-  A -. Pin tab .-> G
-  A -. Pin tab .-> V
-  A -. Publish .-> P[(Live)]
+  S --> A[💬 Apps<br/>Chat + code workbench]
+  S --> G[🤖 Agents<br/>General · Scheduled · Event]
+  S --> V[🔌 Services<br/>API · Versions · Logs]
+  A -->|Publish| P[(🚀 Live)]
   V -->|Versions| P
 ```
 

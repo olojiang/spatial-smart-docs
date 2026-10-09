@@ -4,24 +4,6 @@ Spatial Smart is a **three-pane workspace**: navigation on the left, the convers
 
 <Shot src="/media/zh/service-overview.png" caption="Three-pane layout: ① Navigation ② Conversation area ③ Workbench" marks="10,40,1|38,40,2|80,40,3" />
 
-```mermaid
-flowchart LR
-  subgraph L[① Left navigation]
-    direction TB
-    l1[Collapse button · Logo] --> l2[Space picker · Search]
-    l2 --> l3[Apps / Agents / Services]
-    l3 --> l4[List for the current module]
-    l4 --> l5[Avatar menu · 中/EN · Theme]
-  end
-  subgraph C[② Middle area]
-    c1[Conversation / Configuration / Empty state]
-  end
-  subgraph R[③ Right workbench]
-    r1[Tabs + Pin tab + Collapse]
-  end
-  L --- C --- R
-```
-
 ## ① Left navigation
 
 | Location | Control | What it does |
