@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Global polish: gradient hero, glass nav, numbered step lists, motion.
+   Reads theme colors from themes.css; no hard-coded brand colors here.
+   ========================================================================== */
+/* our switcher replaces the built-in light/dark toggle */
+.VPNavBarAppearance, .VPNavScreenAppearance { display: none !important; }
+
+.VPNavBar:not(.home.top) .content-body { backdrop-filter: saturate(180%) blur(14px); }
+
+/* animated gradient hero title */
+.VPHero .name .clip {
+  background: linear-gradient(120deg, var(--ssd-hero-a), var(--ssd-hero-b), var(--ssd-hero-a));
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; animation: ssd-shine 6s linear infinite;
+}
+@keyframes ssd-shine { to { background-position: 200% center; } }
+.VPHero .image-bg { background-image: linear-gradient(-45deg, var(--ssd-hero-a) 50%, var(--ssd-hero-b) 50%); filter: blur(72px); opacity: .45; }
+.VPFeature { transition: transform .25s, border-color .25s !important; }
+.VPFeature:hover { transform: translateY(-4px); border-color: var(--vp-c-brand-1) !important; }
+
+/* ::: steps container → numbered timeline (idea from answer-me-with-html flow panels) */
+.vp-doc .steps ol { list-style: none; counter-reset: step; padding-left: 0; }
+.vp-doc .steps ol > li { counter-increment: step; position: relative; padding: 0 0 22px 52px; margin: 0; border-left: 2px solid var(--vp-c-divider); margin-left: 16px; }
+.vp-doc .steps ol > li:last-child { border-left-color: transparent; }
+.vp-doc .steps ol > li::before { content: counter(step); position: absolute; left: -17px; top: -2px; width: 32px; height: 32px;
+  border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 14px;
+  background: var(--vp-c-brand-1); color: var(--vp-c-bg); box-shadow: 0 0 0 5px var(--vp-c-bg); }
+
+/* subtle entrance for doc content */
+.vp-doc > div > * { animation: ssd-in .45s ease both; }
+@keyframes ssd-in { from { opacity: 0; transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* hero: product screenshot in a floating, tilted window */
+@media (min-width: 960px) {
+  .VPHero .image-container { width: 560px; height: 380px; transform: none; }
+  .VPHero .image-src {
+    max-width: 560px; max-height: none; border-radius: 14px;
+    border: 1px solid var(--vp-c-divider);
+    box-shadow: 0 40px 80px -30px var(--ssd-glow), 0 10px 30px rgba(0,0,0,.12);
+    transform: translate(-50%, -50%) perspective(1400px) rotateY(-14deg) rotateX(5deg);
+    transition: transform .6s cubic-bezier(.2,.8,.2,1);
+    animation: ssd-float 7s ease-in-out infinite;
+  }
+  .VPHero .image-container:hover .image-src { transform: translate(-50%, -50%) perspective(1400px) rotateY(0) rotateX(0); animation: none; }
+}
+@keyframes ssd-float { 50% { transform: translate(-50%, -52%) perspective(1400px) rotateY(-12deg) rotateX(4deg); } }
+.VPHero .name { letter-spacing: -0.02em; }
+.VPHomeFeatures .VPFeature .icon { background: var(--vp-c-brand-soft); }

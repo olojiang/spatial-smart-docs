@@ -1,0 +1,23 @@
+{
+  "name": "spatial-smart-docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinefield Spatial Smart 使用手册 / User Manual (zh + en)",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "check": "node scripts/check-parity.mjs",
+    "diff:snapshot": "node scripts/snapshot-diff.mjs",
+    "capture": "python3 tools/capture/capture.py",
+    "record": "python3 tools/capture/record.py",
+    "snapshot": "python3 tools/capture/snapshot.py"
+  },
+  "devDependencies": {
+    "markdown-it-container": "^4.0.0",
+    "mermaid": "^11.0.0",
+    "vitepress": "^1.6.0",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  }
+}

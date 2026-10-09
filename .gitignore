@@ -1,0 +1,6 @@
+node_modules
+docs/.vitepress/dist
+docs/.vitepress/cache
+.vercel
+tools/capture/.auth
+snapshot/sitemap.new.json
