@@ -40,7 +40,6 @@ export default withMermaid(
           },
         },
       },
-      socialLinks: [{ icon: 'github', link: 'https://github.com/olojiang/spatial-smart-docs' }],
     },
     locales: {
       root: {
